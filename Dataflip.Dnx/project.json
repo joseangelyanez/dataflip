@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0-*",
+  "description": "Dataflip.Dnx",
+  "authors": [ "Jose Yanez" ],
+  "tags": [ "" ],
+  "projectUrl": "http://www.getdataflip.com",
+  "licenseUrl": "http://www.getdataflip.com",
+
+  "frameworks": {
+    "net451": {
+      "dependencies": {
+      },
+      "frameworkAssemblies": {
+        "System.Data": "4.0.0.0"
+      }
+    },
+    "dotnet5.4": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.0-beta-*",
+        "System.Threading": "4.0.0-beta-*",
+        "System.Data.Common": "4.0.0.0-beta-*",
+        "System.Data.SqlClient": "4.0.0.0-beta-*"
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Console": "4.0.0-beta-*",
+        "EntityFramework.Commands": "7.0.0-rc1-final",
+        "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+        "System.Runtime": "4.0.0-beta-*",
+        "System.Data.Common": "4.0.0.0-beta-*",
+        "System.Data.SqlClient": "4.0.0.0-beta-*",
+        "System.Reflection": "4.1.0-beta-*"
+      }
+    }
+  },
+  "dependencies": {
+
+  }
+
+}

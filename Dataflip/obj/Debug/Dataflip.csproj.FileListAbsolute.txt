@@ -1,0 +1,4 @@
+C:\Git\Dataflip\Dataflip\Dataflip\bin\Debug\Dataflip.dll
+C:\Git\Dataflip\Dataflip\Dataflip\bin\Debug\Dataflip.pdb
+C:\Git\Dataflip\Dataflip\Dataflip\obj\Debug\Dataflip.dll
+C:\Git\Dataflip\Dataflip\Dataflip\obj\Debug\Dataflip.pdb

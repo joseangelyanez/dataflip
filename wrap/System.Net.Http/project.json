@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net40": {
+      "bin": {
+        "assembly": "../../../../../Program Files (x86)/Microsoft ASP.NET/ASP.NET MVC 4/Assemblies/System.Net.Http.dll"
+      }
+    }
+  }
+}

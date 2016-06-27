@@ -1,0 +1,8 @@
+C:\Git\Dataflip\Dataflip\Dataflip.Test\bin\Debug\Dataflip.Test.dll
+C:\Git\Dataflip\Dataflip\Dataflip.Test\bin\Debug\Dataflip.Test.pdb
+C:\Git\Dataflip\Dataflip\Dataflip.Test\bin\Debug\Dataflip.dll
+C:\Git\Dataflip\Dataflip\Dataflip.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Git\Dataflip\Dataflip\Dataflip.Test\bin\Debug\Dataflip.pdb
+C:\Git\Dataflip\Dataflip\Dataflip.Test\obj\Debug\Dataflip.Test.csprojResolveAssemblyReference.cache
+C:\Git\Dataflip\Dataflip\Dataflip.Test\obj\Debug\Dataflip.Test.dll
+C:\Git\Dataflip\Dataflip\Dataflip.Test\obj\Debug\Dataflip.Test.pdb

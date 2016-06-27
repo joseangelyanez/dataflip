@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Dataflip</id>
+    <version>1.0.0-beta</version>
+    <authors>Jose Yanez</authors>
+    <owners>Jose Yanez</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easy data access libraries for Sql Server.</description>
+    <releaseNotes>Project creation.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>EntityFramework Entity Data SqlClient SqlConnection Dataflip Data</tags>
+    <dependencies>
+	  <group targetFramework="dotnet5.4	">
+		<dependency id="System.Runtime" 	   version="4.0.0-beta" 		/>
+        <dependency id="System.Data.Common"    version="4.0.0.0-beta" 	/>
+        <dependency id="System.Data.SqlClient" version="4.0.0.0-beta" 	/>
+        <dependency id="System.Reflection"     version="4.1.0-beta"   	/>
+	  </group>
+	  <group targetFramework="DNXCore5.0">
+		<dependency id="Microsoft.CSharp" 		version="4.0.1-beta-23516" 	/>
+        <dependency id="System.Collections" 	version="4.0.11-beta-23516" />
+        <dependency id="System.Linq" 			version="4.0.1-beta-23516" 	/>
+        <dependency id="System.Runtime" 		version="4.0.0-beta"   	/>
+        <dependency id="System.Threading" 		version="4.0.0-beta"   	/>
+        <dependency id="System.Data.Common" 	version="4.0.0.0-beta" 	/>
+        <dependency id="System.Data.SqlClient" 	version="4.0.0.0-beta" 	/>
+	  </group>
+    </dependencies>
+  </metadata>
+</package>

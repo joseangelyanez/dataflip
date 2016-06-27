@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>C:\Users\JoséAngel\Source\Repos\Dataflip\Dataflip\Dataflip</id>
+    <version>1.0.0</version>
+    <authors>JoséAngel</authors>
+    <owners>JoséAngel</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+	  <group targetFramework="DNXCore5.0">
+		<dependency id="System.Runtime" 	   version="4.0.0-beta-*" 		/>
+        <dependency id="System.Data.Common"    version="4.0.0.0-beta-*" 	/>
+        <dependency id="System.Data.SqlClient" version="4.0.0.0-beta-*" 	/>
+        <dependency id="System.Reflection"     version="4.1.0-beta-*"   	/>
+	  </group>
+	  <group targetFramework="DNXCore5.0">
+		<dependency id="Microsoft.CSharp" 		version="4.0.1-beta-23516" 	/>
+        <dependency id="System.Collections" 	version="4.0.11-beta-23516" />
+        <dependency id="System.Linq" 			version="4.0.1-beta-23516" 	/>
+        <dependency id="System.Runtime" 		version="4.0.0-beta-*"   	/>
+        <dependency id="System.Threading" 		version="4.0.0-beta-*"   	/>
+        <dependency id="System.Data.Common" 	version="4.0.0.0-beta-*" 	/>
+        <dependency id="System.Data.SqlClient" 	version="4.0.0.0-beta-*" 	/>
+	  </group>
+    </dependencies>
+  </metadata>
+</package>

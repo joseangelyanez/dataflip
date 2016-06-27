@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dataflip</name>
+    </assembly>
+    <members>
+        <member name="T:Dataflip.DbQuery">
+            <summary>
+            Contains methods that access a Database and execute queries in 
+            a safely disposed context. The class is abstract use SqlQuery to 
+            run queries against a Sql Server DB.
+            </summary>
+        </member>
+        <member name="M:Dataflip.DbQuery.CreateConnection(System.String)">
+            <summary>
+            When overridden by another class it creates a new DbConnection.
+            </summary>
+            <param name="connectionString"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Dataflip.DbQuery.UserId">
+            <summary>
+            Gets or sets the current user that runs the current query.
+            </summary>
+        </member>
+        <member name="M:Dataflip.DbQuery.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the DbQuery class.
+            </summary>
+            <param name="userId">The current user for the query.</param>
+        </member>
+        <member name="M:Dataflip.DbQuery.ExecuteObjectArray``1(System.String,System.Func{System.Data.Common.DbDataReader,``0},Dataflip.ParameterSetup,System.Data.CommandType)">
+            <summary>
+            Executes a query, iterates through the rows and 
+            executes a delegate that can be used as a lamda expression
+            to map the results into an IEnumerable of T.
+            </summary>
+            <typeparam name="T">
+            The resulting type of the IEnumerable being returned by this method.</typeparam>
+            <param name="connectionStringName">The connection string that will be used to run the query.</param>
+            <param name="query">The query that will be executed in the Database</param>
+            <param name="mapping">A delegate that can return an instance of T.</param>
+            <param name="parameters">A delegate that receives a collection of parameters and 
+            sets them up with any required parameter to run the query.
+            </param>
+            <param name="commandType">
+            Determines whether this query is run as a stored procedure or text.</param>
+            <param name="connectionPool">
+            A ConnectionPool object that can be used to reuse the same connection through
+            multiple queries.
+            </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

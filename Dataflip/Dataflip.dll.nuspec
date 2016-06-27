@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Dataflip</id>
+    <version>1.0.3</version>
+    <authors>Jose Yanez</authors>
+    <owners>Jose Yanez</owners>
+    <licenseUrl>http://www.getdataflip.com/</licenseUrl>
+    <projectUrl>http://www.getdataflip.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Code generation tool for SQL Server sprocs</description>
+    <releaseNotes>Now dataflip helps you generate code to execute your sprocs in a more convenient way.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Entity EntityFramework EF Poco Data Dataflip DataContext SQL SqlServer StoredProcedure Sprocs Query</tags>
+    <dependencies>		  
+	   <group targetFramework="net40"></group>
+    </dependencies>
+  </metadata>
+  <references>
+	<reference file="Dataflip.dll" />
+  </references>
+</package>

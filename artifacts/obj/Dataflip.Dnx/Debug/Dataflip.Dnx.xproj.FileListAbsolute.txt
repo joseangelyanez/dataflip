@@ -1,0 +1,1 @@
+C:\Git\Dataflip\Dataflip\artifacts\obj\Dataflip.Dnx\Debug\Dataflip.Dnx.xprojResolveAssemblyReference.cache
