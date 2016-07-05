@@ -7,7 +7,7 @@ namespace Dataflip
 {
     public class DataflipContext
     {
-        public DataflipSettings Settings { get; set; }
+        public DataflipSettings Settings { get; private set; } 
         public static event Action<DataflipConfigurationEventArgs> Configure = null;
 
         private void InvokeOnConfigure(DataflipConfigurationEventArgs e)
@@ -32,7 +32,7 @@ namespace Dataflip
             e.ContextName = contextName;
             InvokeOnConfigure(e);
 
-            if (Settings == null)
+            if (string.IsNullOrEmpty(Settings.ConnectionString))
             {
                 throw new DataflipSettingsException(
                     $"The settings haven't been configured for the '{contextName}' context yet. The following line (or something that performs a similar operation) is required before instantiating this class: \n\n" 

@@ -408,7 +408,7 @@ namespace Dataflip
         public object ExecuteScalar(
             string query,
             ParameterSetup parameters = null,
-            CommandType commandType = CommandType.Text)
+            CommandType commandType = CommandType.StoredProcedure)
         {
             object result = null;
 
@@ -458,7 +458,7 @@ namespace Dataflip
         public int ExecuteNonQuery(
             string query,
             ParameterSetup parameters = null,
-            CommandType commandType = CommandType.Text)
+            CommandType commandType = CommandType.StoredProcedure)
         {
             DbConnection connection = null;
             try
@@ -468,12 +468,14 @@ namespace Dataflip
                 else
                     connection = CreateConnection(Settings.ConnectionString);
 
+                if (connection.State == ConnectionState.Closed)
+                    connection.Open();
+
                 using (DbCommand command = connection.CreateCommand())
                 {
                     command.CommandText = query;
 
-                    if (parameters != null)
-                        parameters(command.Parameters);
+                    parameters?.Invoke(command.Parameters);
 
                     try
                     {

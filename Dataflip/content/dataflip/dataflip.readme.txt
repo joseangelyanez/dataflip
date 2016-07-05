@@ -1,0 +1,15 @@
+Thanks for using DataFlip!
+
+Where to go from here?
+
+1. Follow the guidelines in the dataflip.json file!
+
+2. Open a command prompt on this directory.
+
+3. Run "dataflip".
+
+Enjoy!
+
+More questions?
+
+Go to https://github.com/joseangelyanez/dataflip/wiki for more information.

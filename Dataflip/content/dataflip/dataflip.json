@@ -1,0 +1,65 @@
+{
+	"contexts" :
+	[
+		{
+			"connectionString" : "ENTER YOUR CONNECTION STRING HERE (REQUIRED)",
+			"namespace" : "ENTER THE NAMESPACE FOR THE CONTEXT (REQUIRED)",
+			"name" : "ENTER THE NAME OF THE CONTEXT CLASS (REQUIRED)",
+			"output" : "../MyContext.cs",
+			"sprocs" : 
+				[
+					/* Example 1. A sproc that returns data in multiple columns.*/
+					{
+						/*[OPTIONAL] Creates a ///<summary> section over the method with a comment.*/
+						"comments" : "This gets all the records in my sproc",
+						
+						/*[OPTIONAL] The name for the method, if omitted the sproc name is used.*/
+						"method" : "MyMethodThatCallsTheSproc",
+						
+						/*[REQUIRED] The sproc name.*/
+						"name" : "MySproc",
+						
+						/*
+						[OPTIONAL] If the sproc returns a query with results, the following parameters will be used to test the sproc
+						and get metadata information about the columns. In the current example Dataflip will execute the following statement
+						against SQL Server:
+						"SET ROWCOUNT 0; EXEC MySproc @MyParam1='Hello', @MyParam2=0, @MyParam3='FALSE'"
+						The "SET ROWCOUNT 0" is run to make sure that no data is affected, Dataflip doesn't need any rows to extract the
+						metadata information, all it needs is an open and valid SqlDataReader, so feel free to define values that return little or just
+						no data.
+						
+						If all parameters in the sproc are optional and you still want to get the sproc results in an array of strongly-typed objects
+						you can add a "testParams" element set to an empty array but keep in mind that the sproc will still be tested also don't remove
+						the element itself since removing it means the sproc doesn't need any testing and therefore no class to hold the results 
+						will be created, see the next example that explains how to create a method that returns Int32 with the number of affected records.
+						*/
+						"testParams" : [
+							{ "@MyParam1" : "Hello : text" },
+							{ "@MyParam2" : "0 : int" },
+							{ "@MyParam3" : "false : bool" }
+						]
+					},
+					
+					/* Example 2. A sproc that returns Int32 with the number of affected records.*/
+					{
+						"name" : "ap_ActionHistory_Retrieve",
+						
+						/* Uses a different name for the method. */
+            "method": "RetrieveActionHistory"
+
+            /* Notice how 'testParams' isn't passed this time, this means the sproc requires no testing and no column information
+              will be retrieved from the resultset. */
+					},
+					
+					/* Example 3. A sproc that returns a scalar value.*/
+					{
+						"name" : "ap_ActionHistory_Retrieve",
+						"method" : "RetrieveActionHistory2",
+						
+						/* [OPTIONAL] Sets the name of the type that should be returned by the method. */
+						"return" : "string"
+					}
+				]
+		}
+	]
+}

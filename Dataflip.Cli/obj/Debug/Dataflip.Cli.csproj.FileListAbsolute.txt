@@ -7,5 +7,6 @@ C:\Git\Dataflip\Dataflip\Dataflip.Cli\obj\Debug\dataflip.exe
 C:\Git\Dataflip\Dataflip\Dataflip.Cli\obj\Debug\dataflip.pdb
 C:\Git\Dataflip\Dataflip\Dataflip.Cli\obj\Debug\Dataflip.Cli.DefaultFiles.resources
 C:\Git\Dataflip\Dataflip\Dataflip.Cli\obj\Debug\Dataflip.Cli.csproj.GenerateResource.Cache
-C:\Git\Dataflip\Dataflip\Dataflip.Cli\bin\Debug\Dataflip.dll
 C:\Git\Dataflip\Dataflip\Dataflip.Cli\obj\Debug\Dataflip.Cli.csprojResolveAssemblyReference.cache
+C:\Git\Dataflip\Dataflip\Dataflip.Cli\bin\Debug\Dataflip.Components.dll
+C:\Git\Dataflip\Dataflip\Dataflip.Cli\bin\Debug\Dataflip.Components.pdb

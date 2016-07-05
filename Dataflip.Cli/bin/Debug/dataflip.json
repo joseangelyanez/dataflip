@@ -3,28 +3,30 @@
 	[
 		{
 			"connectionString" : "Server=198.71.226.6;Database=zunwave_db1;User Id=swoepc12233;Password=uEwg5*78$$",
-			"namespace" : "Hello.World",
-			"name" : "CoolContext",
-			"output" : "x/CoolContext.cs",
-			"sprocs" : 
-				[
-					{
-						"comments" : "This gets all the activities",
-						"name" : "GetActivities",
-						"testParams" : [
-							{ "@Name" : "Hello : text" }
-						]
-					},
-					{
-						"name" : "ap_ActionHistory_Retrieve",
-						"method" : "RetrieveActionHistory"
-					},
-					{
-						"name" : "ap_ActionHistory_Retrieve",
-						"method" : "RetrieveActionHistory2",
-						"return" : "int"
-					}
-				]
+			"namespace" : "Placeflip.Data",
+			"name" : "DbContext",
+      "output": "C:\\Users\\JoséAngel\\Documents\\Visual Studio 2015\\Projects\\PF\\Placeflip.Web.vNext\\Data\\DbContext.cs",
+      "typeScript": {
+        "output": "typyings.ts"
+      },
+      "angular": {
+        "htmlBindings" :  "htmlbindings.html"
+      },
+		"sprocs" : 
+			[
+				{
+					"comments" : "This gets all the activities",
+					"name" : "GetActivities",
+					"testParams" : [
+						{
+							"@name" : "test: varchar"
+						}
+					]
+				},
+				{
+					"name" : "CreateActivity"
+				}
+			]
 		}
 	]
 }

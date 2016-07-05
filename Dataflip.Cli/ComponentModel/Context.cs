@@ -13,6 +13,15 @@ namespace Dataflip.Cli.ComponentModel
     /// </summary>
     public class Context
     {
+        public Context(ContextSection section)
+        {
+            Section = section;
+        }
+
+        /// <summary>
+        /// Gets the configuration section that produces this context.
+        /// </summary>
+        public ContextSection Section { get; set; }
         /// <summary>
         /// Gets or sets the automatically generated code "namespace" element.
         /// </summary>

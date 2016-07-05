@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dataflip.Cli.ComponentModel
 {
-    public class ContextResolver
+    public class ContextBuilder
     {
         /// <summary>
         /// Gets or sets the configuration section that this context is based upon.
@@ -18,7 +18,7 @@ namespace Dataflip.Cli.ComponentModel
         /// Creates a new Context.
         /// </summary>
         /// <param name="configuration">The configuration section.</param>
-        public ContextResolver(ContextSection configuration)
+        public ContextBuilder(ContextSection configuration)
         {
             if (configuration == null)
                 throw new ArgumentNullException("configuration");
@@ -32,7 +32,7 @@ namespace Dataflip.Cli.ComponentModel
         /// <returns>A new Context object.</returns>
         public Context BuildContext()
         {
-            Context context = new Context();
+            Context context = new Context(Configuration);
             context.Namespace = Configuration.Namespace;
             context.Name = Configuration.Name;
 

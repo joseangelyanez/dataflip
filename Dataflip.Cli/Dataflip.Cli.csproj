@@ -65,7 +65,9 @@
     <Compile Include="ComponentModel\CodeGenerators\CodeException.cs" />
     <Compile Include="ComponentModel\CodeGenerators\CodeWriter.cs" />
     <Compile Include="ComponentModel\CodeGenerators\CSharpContextGenerator.cs" />
+    <Compile Include="ComponentModel\CodeGenerators\HtmlBindingsGenerator.cs" />
     <Compile Include="ComponentModel\CodeGenerators\TypeExtentions.cs" />
+    <Compile Include="ComponentModel\CodeGenerators\TypeScriptTypingsGenerator.cs" />
     <Compile Include="ComponentModel\ContextSection.cs" />
     <Compile Include="ComponentModel\Context.cs" />
     <Compile Include="ComponentModel\GlobalProgress.cs" />
@@ -74,9 +76,10 @@
     <Compile Include="ComponentModel\SprocParameter.cs" />
     <Compile Include="ComponentModel\SprocParameterResolver.cs" />
     <Compile Include="ComponentModel\SprocResultProperty.cs" />
-    <Compile Include="ComponentModel\ContextResolver.cs" />
+    <Compile Include="ComponentModel\ContextBuilder.cs" />
     <Compile Include="ComponentModel\GlobalConfiguration.cs" />
     <Compile Include="ComponentModel\SprocSection.cs" />
+    <Compile Include="ComponentModel\StringExtensions.cs" />
     <Compile Include="ComponentModel\TestParamSection.cs" />
     <Compile Include="ComponentModel\SqlParameterResolver.cs" />
     <Compile Include="DataflipToolException.cs" />

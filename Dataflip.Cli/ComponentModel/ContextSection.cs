@@ -21,25 +21,40 @@ namespace Dataflip.Cli.ComponentModel
         public static ContextSection FromJson(JObject jsonObject)
         {
             ContextSection result = new ContextSection();
+            try
+            {
+                string connectionString = jsonObject["connectionString"]?.Value<string>();
+                string nspace = jsonObject["namespace"]?.Value<string>();
+                string name = jsonObject["name"]?.Value<string>();
+                string output = jsonObject["output"]?.Value<string>();
+                string typeScriptTypings = jsonObject["typeScript"]?["output"]?.Value<string>();
+                bool? useCamelCasing = jsonObject["typeScript"]?["useCamelCasing"]?.Value<bool>();
+                string angularHtmlBindings = jsonObject["angular"]?["htmlBindings"]?.Value<string>();
 
-            string connectionString = jsonObject["connectionString"]?.Value<string>();
-            string nspace           = jsonObject["namespace"]?.Value<string>();
-            string name             = jsonObject["name"]?.Value<string>();
-            string output           = jsonObject["output"]?.Value<string>();
+                if (connectionString == null)
+                    throw new DataflipToolException("The '/contexts[]/connectionString' element in dataflip.json is required.");
+                if (nspace == null)
+                    throw new DataflipToolException("The '/contexts[]/namespace' element in dataflip.json is required.");
+                if (name == null)
+                    throw new DataflipToolException("The '/contexts[]/name' element in dataflip.json is required.");
+                if (output == null)
+                    throw new DataflipToolException("The '/contexts[]/output' element in dataflip.json is required.");
+                if (useCamelCasing == null)
+                    useCamelCasing = true;
+                
+                result.ConnectionString = connectionString;
+                result.Namespace = nspace;
+                result.Name = name;
+                result.Output = output;
+                result.TypeScriptTypings = typeScriptTypings;
+                result.TypeScriptUseCamelCasing = useCamelCasing.Value;
+                result.AngularHtmlBindings = angularHtmlBindings;
+            }
+            catch (Exception ex)
+            {
+                throw new DataflipToolException("There was a problem parsing the configuration for at least one context, error details: " + ex.Message);
+            }
 
-            if (connectionString == null)
-                throw new DataflipToolException("The '/contexts[]/connectionString' element in dataflip.json is required.");
-            if (nspace == null)
-                throw new DataflipToolException("The '/contexts[]/namespace' element in dataflip.json is required.");
-            if (name == null)
-                throw new DataflipToolException("The '/contexts[]/name' element in dataflip.json is required.");
-            if (output == null)
-                throw new DataflipToolException("The '/contexts[]/output' element in dataflip.json is required.");
-
-            result.ConnectionString = connectionString;
-            result.Namespace = nspace;
-            result.Name = name;
-            result.Output = output;
 
             if (jsonObject["sprocs"] == null)
                 throw new DataflipToolException("The context does not contain a 'sprocs' element. The 'sprocs' element is required.");
@@ -103,6 +118,17 @@ namespace Dataflip.Cli.ComponentModel
         /// Returns the "sprocs" context section.
         /// </summary>
         public List<SprocSection> Sprocs { get; set; } = new List<SprocSection>();
-
+        /// <summary>
+        /// Gets or sets the TypeScript typings fot the current context.
+        /// </summary>
+        public string TypeScriptTypings { get; set; }
+        /// <summary>
+        /// Specifies whether or not camel casing should be used for TypeScript.
+        /// </summary>
+        public bool TypeScriptUseCamelCasing{ get; set; }
+        /// <summary>
+        /// Specifies the path for generating the HTML bindings file.
+        /// </summary>
+        public string AngularHtmlBindings { get; set; }
     }
 }

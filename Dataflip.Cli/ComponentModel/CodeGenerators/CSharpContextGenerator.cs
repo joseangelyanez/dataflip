@@ -132,7 +132,9 @@ namespace Dataflip.Cli.ComponentModel.CodeGenerators
                 code.WriteCode($"query : \"{method.SprocName}\",");
                 code.WriteCode("parameters : _ =>");
                 code.WriteCode("{");
-                        
+                code.WriteCode("if (parameters == null) return;");
+                code.WriteLine();
+
                 foreach (var param in method.Parameters)
                 {
                     code.WriteCode($"_.AddWithValue(\"{param.ParameterName}\", parameters.{param.ParameterName.Replace("@", "")});");
